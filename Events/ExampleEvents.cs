@@ -38,19 +38,19 @@ namespace AdvancedCSharpFeatures.Events
         }
         private static void GoblinOnLostGold(object sender, int gold)
         {
-            var goblin1 = (Goblin)sender;
-            if (goblin1.Gold <= 0)
+            var goblin = (Goblin)sender;
+            if (goblin.Gold <= 0)
             {
-                Console.WriteLine($"{goblin1.Name} has lost all his coins.");
+                Console.WriteLine($"{goblin.Name} has lost all his coins.");
                 Console.WriteLine("-----------------------");
             }
         }
         private static void GoblinOnFindGold(object sender, int gold)
         {
-            var goblin1 = (Goblin)sender;
-            if (goblin1.Gold >= 0)
+            var goblin = (Goblin)sender;
+            if (goblin.Gold >= 0)
             {
-                Console.WriteLine($"{goblin1.Name} has found gold: {gold}.");
+                Console.WriteLine($"{goblin.Name} has found gold: {gold}.");
                 Console.WriteLine("-----------------------");
             }
         }
